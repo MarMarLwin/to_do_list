@@ -29,7 +29,7 @@ class GoRouterObserver extends NavigatorObserver{
 
   @override
   void didStopUserGesture() {
-    // TODO: implement didStopUserGesture
+   debugPrint(' didStartUserGesture ');
   }
 
 }
