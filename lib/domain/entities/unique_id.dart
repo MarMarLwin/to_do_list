@@ -14,7 +14,7 @@ class UniqueId{
 }
 
 class CollectionId extends UniqueId {
-   const CollectionId._(String value) : super._(value);
+  const CollectionId._(String value) : super._(value);
 
   factory CollectionId() {
     return CollectionId._(const Uuid().v4());
@@ -22,5 +22,17 @@ class CollectionId extends UniqueId {
 
   factory CollectionId.fromUniqueString(String uniqueString) {
     return CollectionId._(uniqueString);
+  }
+}
+
+class EntryId extends UniqueId {
+  const EntryId._(String value) : super._(value);
+
+  factory EntryId() {
+    return EntryId._(const Uuid().v4());
+  }
+
+  factory EntryId.fromUniqueString(String uniqueString) {
+    return EntryId._(uniqueString);
   }
 }
